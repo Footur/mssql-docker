@@ -31,6 +31,10 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.containers.ports.containerPort}}
+          {{- with .Values.resources }}
+          resources:
+             {{- toYaml . | nindent 12 }}
+          {{- end }}
           env:
            - name: MSSQL_PID
              value: "{{ .Values.MSSQL_PID.value}}"
@@ -70,3 +74,4 @@ spec:
        - name: mssql-config-volume
          configMap:
           name: mssql-config
+

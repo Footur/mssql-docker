@@ -42,4 +42,11 @@ pvc:
  mssqldataaccessMode: ReadWriteOnce
  mssqldbsize: 2Gi
 
+resources: {}
+  # limits:
+  #  cpu: 2000m
+  #  memory: 2Gi
+  # requests:
+  #  cpu: 200m
+  #  memory: 256Mi
 
