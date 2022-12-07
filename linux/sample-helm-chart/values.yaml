@@ -32,7 +32,7 @@ service:
   port: 1433
 
 pvc:
- StorageClass: "azure-disk"
+ StorageClassName: "azure-disk"
  userdbaccessMode: ReadWriteOnce
  userdbsize: 5Gi
  userlogaccessMode: ReadWriteOnce
